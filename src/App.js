@@ -16,7 +16,9 @@ function App() {
     setError("");
 
     try {
-      const response = await fetch(`${apiUrl}${encodeURIComponent(searchTerm)}`);
+      const response = await fetch(
+        `${apiUrl}${encodeURIComponent(searchTerm)}`,
+      );
       if (!response.ok) {
         throw new Error("Failed to load recipes");
       }
